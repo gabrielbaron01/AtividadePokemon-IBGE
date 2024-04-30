@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-3">
+  <ul class="table">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Imagem</th>
+        </tr>
+      </thead>
+      <tbody class="table-group" *ngFor="let pokemon of pokedex">
+        <tr>
+          <td style="font-size: larger; font-weight: bold;">{{pokemon.id}}.</td>
+          <td  class="text-uppercase">{{pokemon.name}}</td>
+          <td><img src="{{pokemon.imageUrl}}" alt=""></td>
+        </tr>
+      </tbody>
+    </table>
+  </ul>
+</div>

@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-3">
+  <ul class="table">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Sigla</th>
+          <th>Nome</th>
+          <th>REGIÃO</th>
+        </tr>
+      </thead>
+      <tbody class="table-group" *ngFor="let estados of Brasil">
+        <tr>
+          <td style="font-size: larger; font-weight: bold;">{{estados.id}}.</td>
+          <td  class="text-uppercase">{{estados.sigla}}</td>
+          <td  class="text-uppercase">{{estados.nome}}</td>
+          <td  class="text-uppercase">{{estados.regiao.nome}} | {{estados.regiao.sigla}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </ul>
+</div>
